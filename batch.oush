@@ -1,0 +1,4 @@
+seq 7
+cat myfile.txt PIPE
+grep apple
+head -2 myfile.txt
