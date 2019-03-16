@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define MAX_READ 1024
+#include "Util.h"
 
 char* removeWord(char *line, char *word); //removes any word like PIPE, BG
 int ouSystem(char *command); //executes the command 
@@ -34,7 +35,7 @@ int main (int argc, char **argv)
 	stream = fopen("batch.oush", "r");
 	if (stream == NULL)
 	{
-		fprintf(stderr,"error read only\n");
+		log_err("problem opening files\n");
 		exit(EXIT_FAILURE);
 	}
 
